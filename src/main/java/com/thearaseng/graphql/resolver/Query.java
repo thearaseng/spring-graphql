@@ -24,9 +24,14 @@ public class Query implements GraphQLQueryResolver {
         return authorRepository.findAll();
     }
 
+    public Book findBookById(Long id) {
+        return bookRepository.findOne(id);
+    }
+
     public long countBooks() {
         return bookRepository.count();
     }
+
     public long countAuthors() {
         return authorRepository.count();
     }
